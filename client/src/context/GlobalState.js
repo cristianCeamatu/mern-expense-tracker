@@ -60,7 +60,6 @@ export const GlobalProvider = ({ children }) => {
         transaction,
         config
       );
-      console.log(response.data);
       dispatch({
         type: "ADD",
         payload: response.data.data,
