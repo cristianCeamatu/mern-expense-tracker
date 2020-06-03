@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const dotenv = require("dotenv");
 const colors = require("colors");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const connectDB = require("./config/db");
 
 // Get config
@@ -21,8 +21,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Init morgan
-if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
+// // Init morgan
+// if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
 
 // Set api routes
 app.use("/api/v1/transactions", transactions);
