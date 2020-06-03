@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { v1 as uuid } from "uuid";
 
 const AddTransaction = () => {
   const [text, setText] = useState("");
@@ -14,7 +13,6 @@ const AddTransaction = () => {
         onSubmit={(e) => {
           e.preventDefault();
           addTransaction({
-            id: uuid(),
             amount: +amount,
             text,
           });
