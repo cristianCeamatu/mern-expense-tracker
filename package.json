@@ -4,7 +4,8 @@
   "description": "Backend for expense tracker",
   "main": "server.js",
   "scripts": {
-    "start": "npm start --prefix client",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm --prefix client && run build --prefix client",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
